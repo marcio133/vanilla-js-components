@@ -1,0 +1,51 @@
+@import 'colors';
+@import 'fonts';
+
+body {
+    header {
+        background-image: 
+            url(./images/hero/mobile/mobile-leaves.png),
+            url(./images/hero/mobile/mobile-plantperson.png);
+        background-color: $primary-color-light;
+        background-position: 0 -40%, 100% 95%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+        height: 100vh;
+        padding-top: 40px;
+
+        @media (min-width: 414px) and (min-height: 800px) {
+            background-position: left top, 100% 95%;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            background-image: 
+                url(./images/hero/desktop/left-leaves.png),
+                url(./images/hero/desktop/right-leaves.png),
+                url(./images/hero/desktop/plantperson.png);
+            background-position: left, right, 70%;
+            background-size: contain, contain, 335px 428px;
+            height: 500px;
+            padding-top: 57px;
+        }
+
+        img {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            @include primary-font(40px, 700, #FFFFFF);
+            margin-bottom: 16px;
+
+            @include media-breakpoint-up(lg) {
+                @include primary-font(70px, 700, #FFFFFF);
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+        }
+
+        a {
+            background: none;
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import 'colors';
+@import 'fonts';
+
+body {
+    main {
+        .no-results {
+            padding-top: 47px;
+            padding-bottom: 32px;
+            background: $light-gray;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 52px;
+                padding-bottom: 67px;
+            }
+            
+            .container {
+                @include media-breakpoint-up(lg) {
+                    display: flex;
+                }
+            }
+
+            h2 {
+                @include primary-font(45px, 700, $medium-gray-alternative);
+                margin-bottom: 16px;
+
+                @include media-breakpoint-up(lg) {
+                    width: 442px;
+                }
+            }
+
+            p {                
+                @include primary-font(16px, 400, $medium-gray-alternative);
+                max-width: 219px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 37px; 
+                }
+            }
+
+            &__image {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        .has-results {
+            background: $light-gray;
+            padding-top: 32px;
+
+            &__image {
+                width: 146px;
+            }
+
+            &__container-mobile {
+                display: flex;
+                overflow-x: scroll;
+                margin-bottom: 25px;
+
+                app-plant:not(:last-child) .plant {
+                    margin-right: 16px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+
+            &__container-desktop {
+                display: none;
+
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                }
+            }
+
+            &__button {
+                @include primary-font(16px, 300, $primary-color);
+                background: none;
+                border: 1px solid $primary-color;
+                box-sizing: border-box;
+                border-radius: 25px;
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                margin-bottom: 79px;
+
+                img {
+                    margin-right: 15px;
+                }
+            }
+
+            h2 {
+                @include primary-font(40px, 700, $primary-color-dark);
+
+                @include media-breakpoint-up(lg) {
+                    @include primary-font(55px, 700, $primary-color-dark);
+                    margin-bottom: 54px;
+                }
+            }
+        }
+    }
+}

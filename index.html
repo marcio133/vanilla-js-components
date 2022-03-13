@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Front End Test - Greenthumb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.scss" />
+    <script src="./components/plant.component.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="./images/icons/logo-white.svg" alt="Greenthumb"/>
+        <h1>Find your next green friend</h1>
+        <a href="#form-section">
+          <img src="./images/icons/arrow-down.svg" alt="arrow-down"/>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="form-section" class="container">
+        <form id="my-form" class="form">
+          <div class="form__group">
+            <img class="form__group__image sun-image" src="./images/illustrations/sun.png" alt="Sun">
+            <label class="form__group__label" for="sun-select">1. Set the amount of <strong>sunlight</strong> your plant will get.</label>
+            <select id="sun-select" class="form-select form__group__select" aria-label="Sun light select" >
+              <option value="" selected disabled>Select...</option>
+              <option value="no">No</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+  
+          <div class="form__group">
+            <img class="form__group__image water-image" src="./images/illustrations/wateringcan.png" alt="Water">
+            <label class="form__group__label" for="water-select">2. How often do you want to <strong>water</strong> your plant?</label>
+            <select id="water-select" class="form-select form__group__select" aria-label="Water select">
+              <option value="" selected disabled>Select...</option>
+              <option value="regularly">Regularly </option>
+              <option value="daily">Daily </option>
+              <option value="rarely">Rarely </option>
+            </select>
+          </div>
+  
+          <div class="form__group">
+            <img class="form__group__image dog-image" src="./images/illustrations/dog.png" alt="Dog">
+            <label class="form__group__label" for="pets-select">3. Do you have pets? Do they <strong>chew</strong> plants? </label>
+            <select id="pets-select" class="form-select form__group__select" aria-label="Pets select">
+              <option value="" selected disabled>Select...</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </form> 
+      </section>
+      <section id="no-results" class="no-results">
+        <div class="container">
+          <div>
+            <h2>No results yet...</h2>
+            <p>Use the filters above to find the plant that best fits your environment :)</p>
+          </div>
+          <div class="no-results__image">
+            <img src="./images/illustrations/no-results.png" alt="No results">
+          </div>
+        </div>
+      </section>
+      <section id="has-results" class="has-results">
+        <div class="container">
+          <img class="has-results__image" src="./images/illustrations/pick.png" alt="Our Picks">
+          <h2>Our picks for you</h2>
+          <div id="has-results-container-mobile" class="has-results__container-mobile"></div>
+          <div id="has-results-container-desktop" class="has-results__container-desktop">
+            <div class="row">
+              <div id="desktop-first-section" class="col-6"></div>
+              <div class="col-6">
+                <div id="desktop-second-section" class="row"></div>
+              </div>
+            </div>
+            <div id="desktop-third-section" class="row">
+
+            </div>
+          </div>
+          <button id="has-results-button" class="has-results__button">
+            <img src="./images/icons/arrow-up.svg" alt="arrow-up"/>
+            back to the top
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

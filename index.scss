@@ -1,0 +1,81 @@
+@import "~/node_modules/bootstrap/scss/bootstrap";
+@import 'styles/colors';
+@import 'styles/fonts';
+@import 'styles/plant';
+@import 'styles/header';
+@import 'styles/results';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    main {
+        padding-top: 18px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 47px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            padding-top: 18px;
+
+            @include media-breakpoint-up(lg) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+                padding-top: 0px;
+            }
+
+            &__group {
+                padding: 0 0 50px 0;
+
+                @include media-breakpoint-up(lg) {
+                    padding: 10px 10px 53px 10px;
+                }
+
+                &__label {
+                    @include primary-font(14px, 300, $dark-gray);
+                    margin-bottom: 24px;
+                }
+
+                &__image {
+                    display: block;
+                    margin-bottom: 13px;
+                }
+
+                &__select {
+                    @include primary-font(14px, 300, $medium-gray);
+                    border: 1px solid $medium-gray;
+                    box-sizing: border-box;
+                    border-radius: 19px;
+                    padding: 6px 0 7px 20px;
+                }
+            }
+        }
+
+        .sun-image {
+            width: 75px;
+            height: 75px;
+        }
+
+        .water-image {
+            width: 103px;
+            height: 75px;
+        }
+
+        .dog-image {
+            width: 75px;
+            height: 62px;
+        }
+    }
+}
+
+.container {
+    padding: 0 35px;
+    max-width: 960px;
+}
